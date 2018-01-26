@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class CustomString
 {
 	private char[] values;
@@ -94,7 +96,7 @@ public class CustomString
 		return result;
 	}
 	
-	boolean isEmpty()	
+	public boolean isEmpty()	
 	{
 		long sum = 0;
 		for(int i = 0; i < this.values.length; i++)
@@ -109,7 +111,7 @@ public class CustomString
 	 * Returns the char at an index.
 	 * NOTE: The index is zero based.
 	 */	
-	char charAt(int index)
+	public char charAt(int index)
 	{
 		return this.values[index];
 	}
@@ -124,74 +126,88 @@ public class CustomString
 		}
 		catch(Exception e)
 		{
-			return true;
+			return false;
 		}
 		return this.toString().equals(so.toString());
 	}
 	
-	//TODO
-	boolean equalsIgnoreCase(java.lang.String anotherString)
+	public boolean equalsIgnoreCase(java.lang.String anotherString)
 	{
-		return true;
+		CustomString as = new CustomString(anotherString.toCharArray());
+		return this.toUpperCase().equals(as.toUpperCase());
 	}
 	
 	//TODO
-	int compareTo(CustomString anotherString)
+	public int compareTo(CustomString anotherString)
 	{
-		return -1;
+		if(anotherString == null)
+			return 1;
+
+		if(Arrays.equals(this.toCharArray(),anotherString.toCharArray()))
+			return 0;
+		for(int i = 0; i < this.values.length || i < anotherString.toCharArray().length; i++)
+		{
+			char[] upperCaseThis;
+			char[] upperCaseAnother;
+			if(this.
+		}
 	}
 	
 	//TODO
-	boolean startsWith(CustomString prefix)
+	public boolean startsWith(CustomString prefix)
 	{
 		return true;
 	}
 
 	//TODO
-	boolean endsWith(CustomString suffix)
+	public boolean endsWith(CustomString suffix)
 	{
 		return true;
 	}
 	
 	//TODO
-	int indexOf(CustomString anotherCString)
+	public int indexOf(CustomString anotherCString)
 	{
 		return 0;
 	}
 	
 	//TODO
-	CustomString substring(int beginIndex, int endIndex)
+	public CustomString substring(int beginIndex, int endIndex)
 	{
 		return new CustomString();
 	}
 	
 	//TODO
-	CustomString replace(CustomString target, CustomString Replacement)
+	public CustomString replace(CustomString target, CustomString Replacement)
 	{
 		return new CustomString();
 	}
 	
 	//TODO
-	CustomString resize(int newCapacity)
+	public CustomString resize(int newCapacity)
 	{
 		return new CustomString();
 	}
 	
 	//TODO 
-	boolean contains(CustomString anotherString)
+	public boolean contains(CustomString anotherString)
 	{
 		return true;
 	}
 	
-	//TODO
-	CustomString toUpperCase()
+	public CustomString toUpperCase()
 	{
-		return new CustomString();
+		char[] newValues = new char[this.values.length];
+		System.arraycopy(this.values,0,newValues,0,this.values.length);
+		for(int i = 0; i < newValues.length; i++)
+		{
+			newValues[i] = Character.toUpperCase(newValues[i]);
+		}
+		return new CustomString(newValues);
 	}
-	//TODO
-	char[] toCharArray()
+	
+	public char[] toCharArray()
 	{
-		char[] values = {'a','b'};
-		return values;
+		return this.values;
 	}
 }

@@ -1,6 +1,7 @@
 import static org.junit.Assert.*;
 import java.math.*;
 import org.junit.Test;
+import java.util.Arrays;
 public class CustomStringTest {
 
 	@Test
@@ -72,13 +73,13 @@ public class CustomStringTest {
 	public final void testIsEmpty() {
 		CustomString test = new CustomString();
 		CustomString test2 = new CustomString("n".toCharArray());
-		assertTrue("Postcondition of length() not met!",
+		assertTrue("Postcondition of isEmpty() not met!",
 				test.isEmpty() && !test2.isEmpty());
 	}
 	@Test
 	public final void testCharAt() {
 		CustomString test = new CustomString("naboo".toCharArray());
-		assertTrue("Postcondition of length() not met!",
+		assertTrue("Postcondition of charAt() not met!",
 				test.charAt(2) == 'b');
 
 	}
@@ -87,13 +88,15 @@ public class CustomStringTest {
 	public final void testEqualsObject() {
 		CustomString test = new CustomString("naboo".toCharArray());
 		Object obj = new Object();
-		assertTrue("Postcondition of length() not met!" + String.valueOf(test.equals(obj)),
-				!(!(test.equals(test)) || (test.equals(obj))) );
+		assertTrue("Postcondition of equalsObject() not met!",
+				((test.equals(test)) && !(test.equals(obj))));
 	}
 
 	@Test
 	public final void testEqualsIgnoreCase() {
-		fail("Not yet implemented"); // TODO
+		CustomString test = new CustomString("naboo".toCharArray());
+		assertTrue("Postcondition of equalsIgnoreCase() not met!",
+				test.equalsIgnoreCase("nAbOo"));
 	}
 
 	@Test
@@ -137,13 +140,19 @@ public class CustomStringTest {
 	}
 
 	@Test
-	public final void testToUpperCase() {
-		fail("Not yet implemented"); // TODO
+	public final void testToUpperCase()
+       	{
+		CustomString test = new CustomString("r2-d2".toCharArray());
+		assertTrue("Postcondition of toUpperCase() not met!" + test.toUpperCase().toString(),
+				test.toUpperCase().toString().equals("R2-D2"));
 	}
 
 	@Test
 	public final void testToCharArray() {
-		fail("Not yet implemented"); // TODO
+		char[] name = "r2-d2".toCharArray();
+		CustomString test = new CustomString(name);
+		assertTrue("Postcondition of toUpperCase() not met!" + test.toUpperCase().toString(),
+				Arrays.equals(name,test.toCharArray()));
 	}
 
 }

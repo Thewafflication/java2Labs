@@ -12,7 +12,7 @@ echo "**************************************************************************
 echo "                                 Building Project"
 echo "*******************************************************************************"
 echo ""
-javac -cp .:/usr/share/java/junit4-4.12.jar -verbose -g -d ./bin/ $SRC_FILES 2> log.txt
+javac -cp .:/usr/share/java/junit4-4.12.jar -g -verbose -d ./bin/ $SRC_FILES 2> log.txt
 cat log.txt
 cd bin/
 echo "*******************************************************************************" 

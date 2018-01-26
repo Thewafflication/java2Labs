@@ -1,0 +1,68 @@
+***Portfolio Summary Report***
+
+***Owners***
+Owner 1: Smith, Bob
+
+***CDs***
+CD Name: CD_01
+Amount Invested: $1,000.00
+Purchase Date: 1/1/2015
+Term(Months): 12
+Annual Rate: 1.50%
+Compounding Type: Annually
+Maturity Date: 1/1/2016
+Value at Maturity: $1,015.00
+Interest Earned at Maturity: $15.00
+
+CD Name: CD_02
+Amount Invested: $1,000.00
+Purchase Date: 3/15/2015
+Term(Months): 60
+Annual Rate: 2.35%
+Compounding Type: Annually
+Maturity Date: 3/15/2020
+Value at Maturity: $1,123.30
+Interest Earned at Maturity: $123.30
+
+CD Name: CD_03
+Amount Invested: $1,000.00
+Purchase Date: 6/1/2015
+Term(Months): 60
+Annual Rate: 2.35%
+Compounding Type: Monthly
+Maturity Date: 6/1/2020
+Value at Maturity: $1,124.70
+Interest Earned at Maturity: $124.70
+
+CD Name: CD_04
+Amount Invested: $1,000.00
+Purchase Date: 1/1/2016
+Term(Months): 60
+Annual Rate: 2.35%
+Compounding Type: Daily
+Maturity Date: 1/1/2021
+Value at Maturity: $1,124.82
+Interest Earned at Maturity: $124.82
+
+
+***CD with Max Value at Maturity***
+CD Name: CD_04
+Amount Invested: $1,000.00
+Purchase Date: 1/1/2016
+Term(Months): 60
+Annual Rate: 2.35%
+Compounding Type: Daily
+Maturity Date: 1/1/2021
+Value at Maturity: $1,124.82
+Interest Earned at Maturity: $124.82
+
+***CD that is Maturing the Soonest***
+CD Name: CD_01
+Amount Invested: $1,000.00
+Purchase Date: 1/1/2015
+Term(Months): 12
+Annual Rate: 1.50%
+Compounding Type: Annually
+Maturity Date: 1/1/2016
+Value at Maturity: $1,015.00
+Interest Earned at Maturity: $15.00
